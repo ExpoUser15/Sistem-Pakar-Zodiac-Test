@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zodiac Test</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="https://kit.fontawesome.com/23ad5d2167.js" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous" defer></script>
+    <script src="script.js" type="module" defer></script>
+    <style>
+        .bg-all{
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <style id="css">
+
+    </style>
+    <div class="container-sm">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#"><i class="fa-solid fa-toggle-off fs-5" id="mode"></i></a>
+            </li>
+        </ul>
+    </div>
+    <div class="container-sm">
+        <div class="row my-3 position-relative" style="z-index: 1;">
+            <h5 class="mb-4">Ketahui Sifat dan Karakteristik melalui Zodiac.</h5>
+            <label for="inputEmail3" class="col-sm-1 align-self-center col-form-label text-wrap">Zodiac</label>
+            <div class="col-md-5">
+                <select class="form-select mb-2" aria-label="Default select example" id="zodiacSelect">
+                    <option selected>---</option>
+                    <option>Aquarius</option>
+                    <option>Aries</option>
+                    <option>Cancer</option>
+                    <option>Capricorn</option>
+                    <option>Gemini</option>
+                    <option>Leo</option>
+                    <option>Libra</option>
+                    <option>Pisces</option>
+                    <option>Sagitarius</option>
+                    <option>Scorpio</option>
+                    <option>Taurus</option>
+                    <option>Virgo</option>
+                </select>
+            </div>
+            <div class="col">
+                <input type="button" class="btn btn-dark" data-bs-toggle="modal" data-bs-target="#exampleModal" value="OK" id="okBtn">
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col">
+                <h4 class="mb-3">Tentukan Zodiac Anda!</h4>
+                <ul class="float-md-start">
+                    <li>
+                       <h6>Taurus</h6>
+                       <p>21 April - 20 Mei</p> 
+                    </li>
+                    <li>
+                       <h6>Cancer</h6>
+                       <p>21 Juni - 22 Juli</p> 
+                    </li>
+                    <li>
+                       <h6>Virgo</h6>
+                       <p>23 Agustus - 22 September</p> 
+                    </li>
+                </ul>
+                <ul class="float-md-start">
+                    <li>
+                       <h6>Capricorn</h6>
+                       <p>23 Desember - 20 Januari</p> 
+                    </li>
+                    <li>
+                       <h6>Aquarius</h6>
+                       <p>21 Januari - 19 Februari</p> 
+                    </li>
+                    <li>
+                       <h6>Libra</h6>
+                       23 September - 22 Oktober
+                    </li>
+                </ul>
+                <ul class="float-md-start ">
+                    <li>
+                       <h6>Gemini</h6>
+                       <p>21 Mei - 20 Juni</p> 
+                    </li>
+                    <li>
+                       <h6>Sagitarius</h6>
+                       <p>23 November - 22 Desember</p> 
+                    </li>
+                    <li>
+                       <h6>Aries</h6>
+                       <p>21 Maret - 20 Apri</p> 
+                    </li>
+                </ul>
+                <ul class="float-md-start">
+                    <li>
+                       <h6>Leo</h6>
+                       <p>23 Juli - 22 Agustus</p> 
+                    </li>
+                    <li>
+                       <h6>Scorpio</h6>
+                       <p>23 Oktober - 22 November</p> 
+                    </li>
+                    <li>
+                       <h6>Pisces</h6>
+                       <p>20 Februari - 20 Maret</p> 
+                    </li>
+                </ul>
+            </div>
+            <p class="fst-italic rounded-1">Zodiac ditentukan berdasarkan waktu kelahiran anda. Misalnya jika anda lahir di tanggal 22 bulan maret, maka anda mempunyai zodiac Aries.</p>
+        </div>
+    </div>
+
+    <style>
+        .alerts {
+            padding: 20px;
+            color: white;
+            transition: opacity 250ms ease;
+            opacity: 0;
+            margin-top: -1000px;
+        }
+
+        .show {
+            margin-top: 0;
+            opacity: 1;
+        }
+
+        .display{
+            display: none;
+        }
+        </style>
+    <div class="position-fixed alerts" id="dialogBox" style="z-index: 1060; width: 100%; top: 0; left: 0;">
+        <div class="modal-dialog">
+            <div class="alert alert-dark text-center align-middle" role="alert" >
+                
+            </div>
+        </div>
+    </div>
+    <div class="position-absolute bg-dark display" id="darkBg" style="z-index: 1059; width: 100%; height: 100vh; top: 0; left: 0; opacity: .6;"></div>
+</body>
+</html>
