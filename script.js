@@ -43,6 +43,7 @@ async function showInfo(){
   if (counter === 5) {
         dialogBox.classList.remove('show');
         bgDark.style.display = "none";
+        body.style.overflow = "auto";
         counter = 0;
         return;
   }
